@@ -2073,7 +2073,8 @@ export class Engine extends ThinEngine {
     public getFontOffset(font: string): { ascent: number; height: number; descent: number } {
         const text = document.createElement("span");
         text.innerHTML = "Hg";
-        text.setAttribute("style", `font: ${font} !important`);
+        //text.setAttribute("style", `font: ${font} !important`);
+        text.style.font = font + '!important';
 
         const block = document.createElement("div");
         block.style.display = "inline-block";
